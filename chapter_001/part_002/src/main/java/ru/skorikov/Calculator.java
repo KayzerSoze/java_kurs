@@ -1,4 +1,4 @@
-package skorikov;
+package ru.skorikov;
 /**
 2.3. 
 Нужно сделать файл Calculator.java и создать в нем класс Calculator. 
