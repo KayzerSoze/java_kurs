@@ -15,27 +15,17 @@ import static java.lang.Math.*;
 public class MaxLength {
 	
 	/** Метод max 
-	@param три числа типа double - длины сторон треугольника
-	@return maxlength - наибольшая сторона
+	@param 	неопределенное количество чисел типа double
+	@return maxlength -наибольшее число
 	*/
 	
-	public double max (double AB, double AC, double BC){
-		double maxlength;
-		
-		if ((AB > BC) && (AB > AC)){
-			maxlength = AB;
-		}else{
-		if (AC > BC){
-			maxlength = AC;
-		}else{
-			if(AC < BC){
-				maxlength = BC;
-			}else{
-			System.out.println("Треугольник не существует.");
-			maxlength = 0;
+	public double max (double... nums){
+		double maxlength = 0;
+		for(double i:nums){
+			if(i > maxlength){
+				maxlength = i;
+			}
 		}
-	}
-}
 		return maxlength;
 }
 }
