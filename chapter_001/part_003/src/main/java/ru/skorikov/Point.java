@@ -1,4 +1,4 @@
-package skorikov; 
+package ru.skorikov; 
 import static java.lang.Math.*;
 
 /** 3.1. Создать класс Point c двумя полями x, y. 

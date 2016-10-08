@@ -1,4 +1,4 @@
-package skorikov; 
+package ru.skorikov; 
 import static java.lang.Math.*;
 
 /**Дано. три точки. 
