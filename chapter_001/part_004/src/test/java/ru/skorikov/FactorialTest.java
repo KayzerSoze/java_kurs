@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 	public class FactorialTest{
 		
 		@Test
-		public void FactorialTest(){
+		public void whenFactorialIsTrue(){
 			
 			Factorial fac = new Factorial();
 			int result = fac.compute(5);
