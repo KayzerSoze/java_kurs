@@ -13,11 +13,11 @@ import static org.junit.Assert.*;
 */
 
 public class ArraySortTest{
-	int[] values = new int[]{1, 3, 4, 5, 2};
-	int[] result = new int[]{1, 2, 3, 4, 5};
-		
+			
 	@Test
 	public void whenArraySorted(){
+		int[] values = new int[]{1, 3, 4, 5, 2};
+		int[] result = new int[]{1, 2, 3, 4, 5};
 		ArraySort array = new ArraySort();
 		values = array.arraysort(values);
 		assertThat(result,is(values));
