@@ -19,13 +19,15 @@ public class RemoveDublicate{
                 }
             }
         }
+		//Определяем размер нового массива
 		int k = 0;
         for(int p = 0; p < array.length;p++){
             if(array[p]!="null"){
                 k++;
             }
         }
-		   String[] returnArray = new String[k];
+		//Заполняем новый отсортированный массив
+		String[] returnArray = new String[k];
         int y = 0;
         for(int n = 0; n < array.length;n++){
                 if (array[n] != "null") {
