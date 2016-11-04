@@ -9,6 +9,7 @@
          <packaging>pom</packaging>
          <modules>
                   <module>part_001</module>
+				  <module>part_002</module>
 				  
          </modules>
 </project>
