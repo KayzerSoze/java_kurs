@@ -1,26 +1,56 @@
 package ru.skorikov;
-/**
-Класс запуска приложения
-Отображения описания и вывода меню.
 
-@author Alexey Skorikov
-@since 08.11.2016
-@version 2.0
-*/
+import com.google.common.base.Joiner;
+
+import java.util.Arrays;
+
+
+/**
+ * Класс запуска приложения
+ * Отображения описания и вывода меню.
+ *
+ * @author Alexey Skorikov
+ * @version 2.0
+ * @since 08.11.2016
+ */
 
 public class StartUI {
-	public Input input;
+    /**
+     * Новый интерфейс input.
+     */
+    private Input input;
 
-	public StartUI(Input input) {
-		this.input = input;
-	}
+    /**
+     * Запуск класса StartUI.
+     *
+     * @param atInput интерфейс
+     */
+    public StartUI(Input atInput) {
+        this.input = atInput;
+    }
 
-	public void start(Tracker tracker) {
+    /**
+     * Складываем две строки.
+     */
+    private String hi = Joiner.on("").join(Arrays.asList(
+            "\t\t", "Приветствие"));
+    /**
+     * Складываем две строки.
+     */
+    private String descript = Joiner.on("").join(Arrays.asList(
+            "\t", "Программа учета заявок."));
+
+    /**
+     * Метод запусскает программу.
+     *
+     * @param tracker новый трэкер
+     */
+    public void start(Tracker tracker) {
         boolean exit = false;
-        while (exit != true) {
+        while (!exit) {
 
-            System.out.println("\t\t" + "Приветствие.");
-            System.out.println("\t" + "Программа учета заявок.");
+            System.out.println(hi);
+            System.out.println(descript);
             System.out.println();
             System.out.println("1. Добавить заявку.");
             System.out.println("2. Редактировать заявку.");
@@ -40,8 +70,10 @@ public class StartUI {
             }
             if (menu.equals("2")) {
                 String id = this.input.ask("Введите номер заявки :");
-                String editingname = this.input.ask("Введите новое имя заявки :");
-                String description = this.input.ask("Введите новое описание заявки :");
+                String editingname = this.input.ask(
+                        "Введите новое имя заявки :");
+                String description = this.input.ask(
+                        "Введите новое описание заявки :");
                 Tipe tipe = new Tipe(editingname, description);
                 tracker.editing(id, tipe);
             }
@@ -66,7 +98,8 @@ public class StartUI {
                 tracker.findByName(name);
             }
             if (menu.equals("8")) {
-                String description = this.input.ask("Введите описание заявки :");
+                String description = this.input.ask(
+                        "Введите описание заявки :");
                 tracker.findByDescription(description);
             }
             if (menu.equals("9")) {
@@ -78,9 +111,14 @@ public class StartUI {
         }
     }
 
-	public static void main(String[] args) {
+    /**
+     * Класс запуска приложения.
+     *
+     * @param args массив строк
+     */
+    public static void main(String[] args) {
         Tracker tracker = new Tracker();
         new StartUI(new ConsoleInput()).start(tracker);
 
-	}
+    }
 }
