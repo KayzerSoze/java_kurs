@@ -15,7 +15,7 @@ import static org.junit.Assert.assertThat;
 
 public class TrackerTest {
     /**
-     * A javadoc comment.
+     * Тестируем добавить заявку.
      */
     @Test
     public void whenAddTipe() {
@@ -25,7 +25,7 @@ public class TrackerTest {
     }
 
     /**
-     * A javadoc comment.
+     * Тестируем редактировать заявку.
      */
     @Test
     public void whenEditingTipe() {
@@ -42,7 +42,7 @@ public class TrackerTest {
     }
 
     /**
-     * A javadoc comment.
+     * Тестируем удалить заявку.
      */
     @Test
     public void whenDeleteTipe() {
@@ -57,7 +57,7 @@ public class TrackerTest {
     }
 
     /**
-     * A javadoc comment.
+     * Тестируем добавить комментарий.
      */
     @Test
     public void whenAddComment() {
@@ -70,7 +70,7 @@ public class TrackerTest {
     }
 
     /**
-     * A javadoc comment.
+     * Тестируем найти все заявки.
      */
     @Test
     public void whenFindAll() {
@@ -84,7 +84,7 @@ public class TrackerTest {
     }
 
     /**
-     * A javadoc comment.
+     * Тестируем найти заявку по номеру.
      */
     @Test
     public void whenInputIdThenFindTipeById() {
@@ -97,7 +97,7 @@ public class TrackerTest {
     }
 
     /**
-     * A javadoc comment.
+     * Тестируем найти заявку по имени.
      */
     @Test
     public void whenInputNameThenFindTipeByName() {
@@ -109,7 +109,7 @@ public class TrackerTest {
     }
 
     /**
-     * A javadoc comment.
+     * Тестируем найтизаявку по описанию.
      */
     @Test
 
