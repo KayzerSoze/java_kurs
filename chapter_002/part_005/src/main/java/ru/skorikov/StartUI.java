@@ -11,6 +11,10 @@ package ru.skorikov;
 
 public class StartUI {
     /**
+     * Диапазон значений меню.
+     */
+    private int range[] = new int[]{0, 1, 2, 3, 4, 5, 6, 7};
+    /**
      * Интерфейс input.
      */
     private Input input;
@@ -39,11 +43,9 @@ public class StartUI {
         menu.fillActions();
         do {
             menu.show();
-            int key = Integer.valueOf(input.ask("Select."));
-            menu.select(key);
+            menu.select(input.ask("Select:", range));
         } while ((!"y".equals(this.input.ask("Exit: ? y/n"))));
     }
-
     /**
      * Класс запуска приложения.
      *
@@ -52,8 +54,7 @@ public class StartUI {
     public static void main(String[] args) {
         Tracker tracker = new Tracker();
         Input input = new ConsoleInput();
-        StartUI startUI = new StartUI(input, tracker);
-        startUI.start();
+        new StartUI(input, tracker).start();
 
     }
 }

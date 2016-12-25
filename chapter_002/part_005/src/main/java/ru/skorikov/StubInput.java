@@ -14,6 +14,10 @@ public class StubInput implements Input {
      */
     private String[] answers;
     /**
+     * Массив значений номеров меню.
+     */
+    private int [] range;
+    /**
      * счетчик.
      */
     private int position = 0;
@@ -35,5 +39,12 @@ public class StubInput implements Input {
      */
     public String ask(String question) {
         return answers[position++];
+    }
+    public StubInput(String[] atAnswers, int[] atRange){
+        this.answers = atAnswers;
+        this.range = atRange;
+    }
+    public int ask(String question, int[] range){
+        return range[position++];
     }
 }

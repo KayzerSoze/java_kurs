@@ -16,7 +16,7 @@ public interface Input {
      */
     String ask(String question);
     /**
-     * 
+
      * @param question вопрос
      * @param range диапазон значений
      * @return

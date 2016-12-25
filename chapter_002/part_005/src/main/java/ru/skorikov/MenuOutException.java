@@ -8,7 +8,12 @@ package ru.skorikov;
  * @since 18.12.2016
  */
 public class MenuOutException extends RuntimeException {
-    public MenuOutException(String msg){
-        super( msg);
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public MenuOutException(String msg){
+        super(msg);
     }
 }
