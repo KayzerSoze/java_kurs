@@ -13,14 +13,12 @@ public class StubInput implements Input {
      * Массив ответов.
      */
     private String[] answers;
-    /**
-     * Массив значений номеров меню.
-     */
-    private int [] range;
+        
     /**
      * счетчик.
      */
     private int position = 0;
+    
 
     /**
      * Конструктор Массив ответов на вопросы программы.
@@ -37,14 +35,12 @@ public class StubInput implements Input {
      * @param question вопро программы
      * @return ответ из масива
      */
+ 
     public String ask(String question) {
         return answers[position++];
     }
-    public StubInput(String[] atAnswers, int[] atRange){
-        this.answers = atAnswers;
-        this.range = atRange;
-    }
     public int ask(String question, int[] range){
-        return range[position++];
+    	return Integer.valueOf(answers[position++]);
     }
+
 }
