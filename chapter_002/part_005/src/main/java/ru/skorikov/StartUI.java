@@ -13,6 +13,7 @@ public class StartUI {
     /**
      * Диапазон значений меню.
      */
+	
     private int range[] = new int[]{0, 1, 2, 3, 4, 5, 6, 7};
     /**
      * Интерфейс input.
@@ -53,7 +54,7 @@ public class StartUI {
      */
     public static void main(String[] args) {
         Tracker tracker = new Tracker();
-        Input input = new ConsoleInput();
+        Input input = new ValidateInput();
         new StartUI(input, tracker).start();
 
     }

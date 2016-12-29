@@ -88,6 +88,7 @@ public class MenuTracker {
          * @param atTracker трекер
          */
         public void execute(Input atInput, Tracker atTracker) {
+        	
             String name = input.ask("Введите имя заявки :");
             String description = input.ask("Введите описание заявки:");
             tracker.add(new Tipe(name, description));
@@ -124,10 +125,16 @@ public class MenuTracker {
          */
         public void execute(Input atInput, Tracker atTracker) {
             String id = input.ask("Введите номер заявки :");
-            String name = input.ask("Введите имя заявки :");
-            String description = input.ask("Введите описание заявки:");
-            Tipe tipe = new Tipe(name, description);
-            tracker.editing(id, tipe);
+            if (tracker.findById(id) != null) {
+            	String name = input.ask("Введите имя заявки :");
+                String description = input.ask("Введите описание заявки:");
+                Tipe tipe = new Tipe(name, description);
+                tracker.editing(id, tipe);
+                System.out.println("Заявка изменена.");
+			}else{
+				System.out.println("Заявка не найдена.");
+			}
+            
         }
 
         /**
@@ -162,11 +169,17 @@ public class MenuTracker {
         public void execute(Input atInput, Tracker atTracker) {
             String id = input.ask("Введите номер заявки :");
             Tipe tipe = tracker.findById(id);
-            tracker.delete(tipe);
+            if (tipe != null) {
+            	tracker.delete(tipe);
+            	System.out.println("Заявка удалена.");
+			}else{
+				System.out.println("Заявка не существует.");
+			}
+            
         }
 
         /**
-         * 3-й элемент меню н аэкране.
+         * 3-й элемент меню н экране.
          *
          * @return строка
          */
@@ -196,8 +209,14 @@ public class MenuTracker {
          */
         public void execute(Input atInput, Tracker atTracker) {
             String id = input.ask("Введите номер заявки:");
-            String comment = input.ask("Введите комментарий :");
-            tracker.addComment(tracker.findById(id), comment);
+            if (tracker.findById(id) != null) {
+            	String comment = input.ask("Введите комментарий :");
+                tracker.addComment(tracker.findById(id), comment);
+                System.out.println("Комментарий добавлен.");
+			}else{
+				System.out.println("Заявка не найдена.");
+			}
+            
         }
 
         /**
@@ -230,9 +249,13 @@ public class MenuTracker {
          * @param atTracker трекер.
          */
         public void execute(Input atInput, Tracker atTracker) {
-            for (Tipe tipe : tracker.findByAll()) {
-                System.out.println(String.format("%s, %s", tipe.getId(), tipe.getName()));
-            }
+        		for (Tipe tipe : tracker.findByAll()) {
+        			if (tipe != null) {
+        				System.out.println(String.format("%s, %s", tipe.getId(), tipe.getName()));
+					}
+                    
+                }
+            
         }
 
         /**
@@ -266,7 +289,12 @@ public class MenuTracker {
          */
         public void execute(Input atInput, Tracker atTracker) {
             String id = input.ask("Введите номер заявки :");
-            tracker.findById(id);
+            if (tracker.findById(id) != null) {
+            	 System.out.println(tracker.findById(id));
+			}else{
+				System.out.println("Заявка не существует.");
+			}
+           
         }
 
         /**
@@ -300,7 +328,12 @@ public class MenuTracker {
          */
         public void execute(Input atInput, Tracker atTracker) {
             String name = input.ask("Введите имя заявки :");
-            tracker.findByName(name);
+            if (tracker.findByName(name)!= null) {
+				System.out.println(tracker.findByName(name));
+			}else{
+				System.out.println("Заявка не найдена.");
+			}
+            
         }
 
         /**
@@ -335,7 +368,12 @@ public class MenuTracker {
         public void execute(Input atInput, Tracker atTracker) {
             String description = atInput.ask(
                     "Введите описание заявки :");
-            tracker.findByDescription(description);
+            if (tracker.findByDescription(description)!= null) {
+				System.out.println(tracker.findByDescription(description));
+			}else{
+				System.out.println("Заявка не найдена.");
+			}
+            
         }
 
         /**
