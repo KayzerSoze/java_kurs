@@ -27,8 +27,6 @@ public class Tracker {
     private int position = 0;
     /**
      * Генерирует номер заявки.
-     *
-     * @return номер
      */
     private int atId  = 0;
 

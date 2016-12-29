@@ -15,11 +15,11 @@ public interface Input {
      * @return зависит от параметра
      */
     String ask(String question);
-    /**
 
+    /**
      * @param question вопрос
-     * @param range диапазон значений
-     * @return
+     * @param range    диапазон значений
+     * @return зависит от параметра
      */
     int ask(String question, int[] range);
 
