@@ -16,7 +16,7 @@ public class Tracker {
     /**
      * Размер массива в трекере.
      */
-    private final int sizeTipes = 10;
+    private final int sizeTipes = 3;
     /**
      * Новый массив для хранения заявок.
      */
@@ -28,9 +28,12 @@ public class Tracker {
     /**
      * Генерирует номер заявки.
      */
+    public int getPosition(){
+    	return position;
+    }
     private int atId  = 0;
-
-    /**
+ 
+     /**
      * Добавить заявку.
      *
      * @param tipe новая заявка
@@ -66,17 +69,13 @@ public class Tracker {
         for (int i = 0; i != this.position; i++) {
             if (tipes[i].equals(tipe)) {
                 tipes[i] = null;
-            }
-        }
-        for (int j = 0; j != this.position; j++) {
-            if (tipes[j] == null) {
-                for (int k = j; k != this.position;) {
-                    tipes[k + 1] = tipes[k];
-                    k++;
+                for(int j = i; j < this.position-1;){
+                	tipes[j] = tipes[j+1];
+                	j++;
                 }
             }
         }
-        tipes[this.position] = null;
+        this.position--;
     }
 
     /**

@@ -88,10 +88,14 @@ public class MenuTracker {
          * @param atTracker трекер
          */
         public void execute(Input atInput, Tracker atTracker) {
-        	
-            String name = input.ask("Введите имя заявки :");
+        if(tracker.getPosition() != 3){
+           	String name = input.ask("Введите имя заявки :");
             String description = input.ask("Введите описание заявки:");
             tracker.add(new Tipe(name, description));
+        }else{
+        	System.out.println("Список заявок полон.");
+        }
+        	           
         }
 
         /**
@@ -167,8 +171,8 @@ public class MenuTracker {
          * @param atTracker трекер
          */
         public void execute(Input atInput, Tracker atTracker) {
-            String id = input.ask("Введите номер заявки :");
-            Tipe tipe = tracker.findById(id);
+            String name = input.ask("Введите имя заявки :");
+            Tipe tipe = tracker.findByName(name);
             if (tipe != null) {
             	tracker.delete(tipe);
             	System.out.println("Заявка удалена.");
@@ -251,7 +255,7 @@ public class MenuTracker {
         public void execute(Input atInput, Tracker atTracker) {
         		for (Tipe tipe : tracker.findByAll()) {
         			if (tipe != null) {
-        				System.out.println(String.format("%s, %s", tipe.getId(), tipe.getName()));
+        				System.out.println(String.format("%s, %s", tipe.getName(), tipe.getDescription()));
 					}
                     
                 }
