@@ -10,8 +10,8 @@ boolean contains(String origin, String sub).
 @author Alexey Skorikov
 @since 17.10.2016
 @verion 1.0
-
 */
+
 public class SearchSubString{
 	
 	public boolean searchSubString(String origin, String sub){
