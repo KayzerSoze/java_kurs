@@ -12,6 +12,7 @@ boolean contains(String origin, String sub).
 @verion 1.0
 
 */
+
 public class SearchSubString{
 	
 	public boolean searchSubString(String origin, String sub){
