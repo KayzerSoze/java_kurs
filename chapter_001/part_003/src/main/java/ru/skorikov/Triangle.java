@@ -9,7 +9,7 @@ import static java.lang.Math.*;
 
 @author Alexey Skorikov
 @since 18.09.2016
-@verion 1.0
+@verion 1.01
  */
 
 

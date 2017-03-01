@@ -5,7 +5,7 @@ package ru.skorikov;
  * Отображения описания и вывода меню.
  *
  * @author Alexey Skorikov
- * @version 4.0
+ * @version 4.01
  * @since 20.11.2016
  */
 
