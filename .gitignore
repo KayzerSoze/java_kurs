@@ -1,6 +1,5 @@
 *.class
 *.project
-*.idea
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
@@ -14,10 +13,4 @@
 hs_err_pid*
 /.idea/
 /.settings/
-Будет удалено chapter_001/part_001/src/uml/
-Будет удалено chapter_002/part_001/.idea/workspace.xml
-Будет удалено chapter_002/part_001/src/
-Будет удалено chapter_002/part_002/src/
-Будет удалено chapter_002/part_003/src/test/
-Будет удалено chapter_002/part_004/src/
-Будет удалено chapter_002/part_005/src/
+
