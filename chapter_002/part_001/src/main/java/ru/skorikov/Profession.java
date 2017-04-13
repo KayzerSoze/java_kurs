@@ -14,16 +14,23 @@ public class Profession {
     protected String Diplom;
     protected int age;
     protected int worked_time;
+    protected String worked_process;
 
 
     public Profession(String name, String diplom, int age, int worked_time) {
         Name = name;
         Diplom = diplom;
         this.age = age;
-        this.worked_time = worked_time;
+        //this.worked_time = worked_time;
     }
-    public void work(Profession profession){
-        System.out.println();
+
+    public Profession(String name) {
+        Name = name;
+    }
+
+    public String work(Profession profession){
+        String work = Name + profession.getName();
+        return work;
     }
 
     public String getName() {
@@ -57,5 +64,12 @@ public class Profession {
     public void setWorked_time(int worked_time) {
         this.worked_time = worked_time;
     }
+/**
+    public String getWorked_process() {
+        return worked_process;
+    }
 
+    public void setWorked_process(String worked_process) {
+        this.worked_process = worked_process;
+    }*/
 }

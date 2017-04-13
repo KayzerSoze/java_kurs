@@ -7,12 +7,17 @@ package ru.skorikov;
  * To change this template use File | Settings | File Templates.
  */
 public class Teacher extends Profession {
-    public Teacher(String name, String diplom, int age, int worked_time) {
-        super(name, diplom, age, worked_time);
+
+    public String worked_process = " учит ";
+
+    public Teacher(String name) {
+        super(name);
     }
+
     @Override
-    public void work(Profession profession){
-        System.out.println(super.getName() + " учит "+ profession.getName() );
+    public String work(Profession profession) {
+        String work = super.getName() + worked_process + profession.getName();
+        return work;
     }
 
 
