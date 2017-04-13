@@ -10,18 +10,17 @@ import javax.xml.bind.SchemaOutputResolver;
  * To change this template use File | Settings | File Templates.
  */
 public class Profession {
-    protected String Name;
-    protected String Diplom;
-    protected int age;
-    protected int worked_time;
-    protected String worked_process;
+    private String Name;
+    private String Diplom;
+    private int age;
+    private int worked_time;
 
 
     public Profession(String name, String diplom, int age, int worked_time) {
         Name = name;
         Diplom = diplom;
         this.age = age;
-        //this.worked_time = worked_time;
+        this.worked_time = worked_time;
     }
 
     public Profession(String name) {
@@ -29,11 +28,10 @@ public class Profession {
     }
 
     public String work(Profession profession){
-        String work = Name + profession.getName();
-        return work;
+        return Name + profession.getName();
     }
 
-    public String getName() {
+    String getName() {
         return Name;
     }
 
@@ -64,12 +62,5 @@ public class Profession {
     public void setWorked_time(int worked_time) {
         this.worked_time = worked_time;
     }
-/**
-    public String getWorked_process() {
-        return worked_process;
-    }
 
-    public void setWorked_process(String worked_process) {
-        this.worked_process = worked_process;
-    }*/
 }
