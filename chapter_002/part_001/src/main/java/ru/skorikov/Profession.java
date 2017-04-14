@@ -4,10 +4,10 @@ import javax.xml.bind.SchemaOutputResolver;
 
 /**
  * Created with IntelliJ IDEA.
- * User: user18
+ * Autor: Alex Skorikov
  * Date: 07.04.17
- * Time: 13:03
- * To change this template use File | Settings | File Templates.
+ * Version Stady_2
+ *
  */
 public class Profession {
     private String Name;

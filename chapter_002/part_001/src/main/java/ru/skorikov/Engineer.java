@@ -1,10 +1,10 @@
 package ru.skorikov;
 /**
  * Created with IntelliJ IDEA.
- * User: user18
+ * Autor: Alex Skorikov
  * Date: 07.04.17
- * Time: 13:04
- * To change this template use File | Settings | File Templates.
+ * Version Stady_2
+ *
  */
 public class Engineer extends Profession {
 
