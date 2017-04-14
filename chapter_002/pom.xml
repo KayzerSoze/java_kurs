@@ -2,17 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-         <modelVersion>4.0.0</modelVersion>
-         <groupId>ru.skorikov.chapter_002</groupId>
-         <artifactId>chapter_002</artifactId>
-         <version>1.0</version>
-         <packaging>pom</packaging>
-         <modules>
-                  <module>part_001</module>
-				  <module>part_002</module>
-				  <module>part_003</module>
-				  <module>part_004</module>
-				  <module>part_005</module>
-				  
-         </modules>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ru.skorikov.chapter_002</groupId>
+    <artifactId>chapter_002</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>part_001</module>
+    </modules>
 </project>
