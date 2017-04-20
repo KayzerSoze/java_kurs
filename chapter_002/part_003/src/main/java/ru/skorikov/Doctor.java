@@ -9,6 +9,15 @@ package ru.skorikov;
 public class Doctor extends  Profession {
 
     public String worked_process = " лечит ";
+    public String training;//Повышение квалификации
+
+    public String getTraining() {
+        return training;
+    }
+
+    public void setTraining(String training) {
+        this.training = training;
+    }
 
     public Doctor(String name) {
         super(name);

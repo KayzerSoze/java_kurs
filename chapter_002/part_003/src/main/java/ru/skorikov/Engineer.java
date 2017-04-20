@@ -9,6 +9,15 @@ package ru.skorikov;
 public class Engineer extends Profession {
 
     public String worked_process = " изобретает для ";
+    public String Inventions;//Изобретения
+
+    public String getInventions() {
+        return Inventions;
+    }
+
+    public void setInventions(String inventions) {
+        Inventions = inventions;
+    }
 
     public Engineer(String name) {
         super(name);

@@ -9,6 +9,15 @@ package ru.skorikov;
 public class Teacher extends Profession {
 
     public String worked_process = " учит ";
+    public String academic_degree;//Ученая степень
+
+    public String getAcademic_degree() {
+        return academic_degree;
+    }
+
+    public void setAcademic_degree(String academic_degree) {
+        this.academic_degree = academic_degree;
+    }
 
     public Teacher(String name) {
         super(name);

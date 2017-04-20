@@ -10,10 +10,10 @@ import javax.xml.bind.SchemaOutputResolver;
  *
  */
 public class Profession {
-    private String Name;
-    private String Diplom;
-    private int age;
-    private int worked_time;
+    private String Name;//Имя
+    private String Diplom;//Наличие диплома
+    private int age;//Возраст
+    private int worked_time;//Стаж
 
 
     public Profession(String name, String diplom, int age, int worked_time) {
