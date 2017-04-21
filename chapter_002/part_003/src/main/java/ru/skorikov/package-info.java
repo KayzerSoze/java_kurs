@@ -1,7 +1,7 @@
 /**
  * Created with IntelliJ IDEA.
- * Autor: Alex Skorikov
- * Date: 07.04.17
- * Version Stady_2
+ * autor: Alex Skorikov.
+ * date: 07.04.17
+ * version Stady_2.
  */
 package ru.skorikov;

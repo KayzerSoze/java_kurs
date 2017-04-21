@@ -1,66 +1,124 @@
 package ru.skorikov;
 
-import javax.xml.bind.SchemaOutputResolver;
-
 /**
  * Created with IntelliJ IDEA.
- * Autor: Alex Skorikov
- * Date: 07.04.17
- * Version Stady_2
+ * @author: Alex Skorikov.
+ * @date: 07.04.17
+ * @version Stady_2.
+ * Класс описывает профессию.
  *
  */
 public class Profession {
-    private String Name;//Имя
-    private String Diplom;//Наличие диплома
-    private int age;//Возраст
-    private int worked_time;//Стаж
+    /**
+     * Экземпляр класса имеет переменную имя.
+     */
+    private String name;
+    /**
+     * Наличие диплома.
+     */
+    private String diplom;
+    /**
+     * Возраст.
+     */
+    private int age;
+    /**
+     * Трудовой опыт или стаж.
+     */
+    private int workedTime;
 
-
-    public Profession(String name, String diplom, int age, int worked_time) {
-        Name = name;
-        Diplom = diplom;
+    /**
+     * Конструктор класса.
+     * @param name имя.
+     * @param diplom наличие диплома.
+     * @param age возраст.
+     * @param workedTime трудовой стаж.
+     */
+    public Profession(String name, String diplom, int age, int workedTime) {
+        this.name = name;
+        this.diplom = diplom;
         this.age = age;
-        this.worked_time = worked_time;
+        this.workedTime = workedTime;
     }
 
+    /**
+     * Переопределенный конструктор класса.
+     * @param name имя.
+     */
     public Profession(String name) {
-        Name = name;
+        this.name = name;
     }
 
-    public String work(Profession profession){
-        return Name + profession.getName();
+    /**
+     * Метод класса возвращает строку.
+     * @param profession принимает экземпляр класса Profession.
+     * @return строка
+     */
+    public String work(Profession profession) {
+        return name + profession.getName();
     }
 
+    /**
+     * Получаем имя.
+     * @return имя.
+     */
     String getName() {
-        return Name;
+        return name;
     }
 
+    /**
+     * Задать имя.
+     * @param name имя.
+     */
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
+    /**
+     * Получить диплом.
+     * @return диплом.
+     */
     public String getDiplom() {
-        return Diplom;
+        return diplom;
     }
 
+    /**
+     * Задать диплом.
+     * @param diplom диплом.
+     */
     public void setDiplom(String diplom) {
-        Diplom = diplom;
+        this.diplom = diplom;
     }
 
+    /**
+     * Получить возраст.
+     * @return возраст.
+     */
     public int getAge() {
         return age;
     }
 
+    /**
+     * Задать возраст.
+     * @param age возраст.
+     */
     public void setAge(int age) {
         this.age = age;
     }
 
-    public int getWorked_time() {
-        return worked_time;
+    /**
+     * Получить значение опыта.
+     * @return опыт.
+     */
+    public int getWorkedTime() {
+        return workedTime;
     }
 
-    public void setWorked_time(int worked_time) {
-        this.worked_time = worked_time;
+    /**
+     * Задать значение опыта.
+     * @param workedTime опыт.
+     */
+    public void setWorkedTime(int workedTime) {
+        this.workedTime = workedTime;
     }
 
 }

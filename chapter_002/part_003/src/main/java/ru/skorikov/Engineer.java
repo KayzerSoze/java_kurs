@@ -1,32 +1,50 @@
 package ru.skorikov;
 /**
  * Created with IntelliJ IDEA.
- * Autor: Alex Skorikov
- * Date: 07.04.17
- * Version Stady_2
+ * @author: Alex Skorikov.
+ * @date: 07.04.17
+ * @version Stady_2.
  *
  */
 public class Engineer extends Profession {
+    /**
+     * Изобретения.
+     */
+    private String inventions;
 
-    public String worked_process = " изобретает для ";
-    public String Inventions;//Изобретения
-
+    /**
+     * Получить наличие изобретений.
+     * @return изобретения.
+     */
     public String getInventions() {
-        return Inventions;
+        return inventions;
     }
 
+    /**
+     * Установить наличие изобретений.
+     * @param inventions изобретения.
+     */
     public void setInventions(String inventions) {
-        Inventions = inventions;
+        inventions = inventions;
     }
 
+    /**
+     * Наследование из родительского класса переменной имя.
+     * @param name имя.
+     */
     public Engineer(String name) {
         super(name);
     }
 
+    /**
+     * Переопределенный метод родительского класса.
+     * @param profession Принимает экземпляр класса Profession.
+     * @return Рабочий "процесс" инженера.
+     */
     @Override
     public String work(Profession profession) {
-        String work = super.getName() + worked_process + profession.getName();
-        return work;
+        String workedProcess = " изобретает для ";
+        return super.getName() + workedProcess + profession.getName();
     }
 
 }

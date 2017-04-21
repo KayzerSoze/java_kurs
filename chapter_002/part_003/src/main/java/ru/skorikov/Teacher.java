@@ -1,32 +1,50 @@
 package ru.skorikov;
 /**
  * Created with IntelliJ IDEA.
- * Autor: Alex Skorikov
- * Date: 07.04.17
- * Version Stady_2
+ * @author: Alex Skorikov
+ * @date: 07.04.17
+ * @version Stady_2
  *
  */
 public class Teacher extends Profession {
+    /**
+     * Ученая степень.
+     */
+    private String academicDegree;
 
-    public String worked_process = " учит ";
-    public String academic_degree;//Ученая степень
-
-    public String getAcademic_degree() {
-        return academic_degree;
+    /**
+     * Получить наличие ученой степени.
+     * @return ученая степень.
+     */
+    public String getAcademicDegree() {
+        return academicDegree;
     }
 
-    public void setAcademic_degree(String academic_degree) {
-        this.academic_degree = academic_degree;
+    /**
+     * Установить значение ученой степени.
+     * @param academicDegree ученая степень.
+     */
+    public void setAcademicDegree(String academicDegree) {
+        this.academicDegree = academicDegree;
     }
 
+    /**
+     * Наследование из родительского класса переменной имя.
+     * @param name имя.
+     */
     public Teacher(String name) {
         super(name);
     }
 
+    /**
+     * Переопределенный метод родительского класса.
+     * @param profession Принимает экземпляр класса Profession.
+     * @return Рабочий "процесс" учителя.
+     */
     @Override
     public String work(Profession profession) {
-        String work = super.getName() + worked_process + profession.getName();
-        return work;
+        String workedProcess = " учит ";
+        return super.getName() + workedProcess + profession.getName();
     }
 
 
