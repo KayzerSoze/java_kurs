@@ -1,5 +1,6 @@
 package ru.skorikov;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -56,12 +57,18 @@ public class Tracker {
             if (items[i] != null && items[i].getId().equals(id)) {
                 this.items[i].setName(item.getName());
                 this.items[i].setDescription(item.getDescription());
+                break;
             }
         }
     }
 
     /**
      * Метод удаления заявки.
+     * В аргументах arraycopy() передается исходный массив,
+     * начальная позиция копирования в исходном массиве,
+     * приёмный массив,
+     * начальная позиция копирования в приёмном массиве
+     * и количество копируемых элементов.
      *
      * @param item item.
      */
@@ -69,14 +76,8 @@ public class Tracker {
         for (int i = 0; i < items.length - 1; i++) {
             if (items[i] != null && items[i].equals(item)) {
                 items[i] = null;
-            }
-        }
-        for (int j = 0; j < items.length - 1; j++) {
-            if (items[j] == null) {
-                for (int k = j; k < items.length - 1; k++) {
-                    items[k] = items[k + 1];
-                }
-                items[items.length - 1] = null;
+                System.arraycopy(this.items, i + 1,
+                        this.items, i, this.items.length - 1 - i);
             }
         }
     }
@@ -95,26 +96,21 @@ public class Tracker {
     }
 
     /**
-     * Поиск заявки по имени.
-     * Я понимаю что не самое лучшее решение.
-     * но умнее пока не придумал.
+     * Поиск заявки по имени..
      *
      * @param key ключ.
      * @return Массив найденных по имени заявок.
      */
     public Item[] findeByName(String key) {
         int razmer = 0;
-        for (int i = 0; i < items.length - 1; i++) {
+        Item[] result = new Item[this.items.length];
+        for (int i = 0; i < this.items.length; i++) {
             if (items[i] != null && items[i].getName().equals(key)) {
+                result[razmer] = items[i];
                 razmer++;
             }
         }
-        Item[] result = new Item[razmer];
-        for (int j = 0; j < items.length - 1; j++) {
-            if (items[j] != null && items[j].getName().equals(key)) {
-                result[j] = items[j];
-            }
-        }
+        result = Arrays.copyOf(result, razmer);
         return result;
     }
 
