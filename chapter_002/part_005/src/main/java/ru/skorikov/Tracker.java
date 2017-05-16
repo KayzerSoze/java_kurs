@@ -33,7 +33,7 @@ class Tracker {
     /**
      * Конструктор класса.
      */
-    public Tracker() {
+    protected Tracker() {
     }
 
     /**
