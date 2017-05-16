@@ -30,22 +30,21 @@ class StartUI {
      * Метод класса.
      */
     private void init() {
+
         Tracker tracker = new Tracker();
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
         do {
-            System.out.println("MENU");
-            System.out.println("0. Add new Item.");
-            System.out.println("1. Show all items.");
-            System.out.println("2. Edit item.");
-            System.out.println("3. Delete item.");
-            System.out.println("4. Find item by Id.");
-            System.out.println("5. Find items by name.");
-            System.out.println("6. Exit Program.");
+            for (MenuLevel menuLevel : MenuLevel.values()) {
+                System.out.println(menuLevel.ordinal()
+                        + ". "
+                        + menuLevel.getNameMenuLevel());
+            }
             System.out.println("Select:");
-            int menuNumber = scanner.nextInt();
-            switch (menuNumber) {
-                case 0:
+            int select = scanner.nextInt();
+
+            switch (MenuLevel.values()[select]) {
+                case ADD:
                     String name = input.ask("Enter Item name:");
                     String description = input.ask("Enter Item description:");
                     if (tracker.getPosition() < 10) {
@@ -56,10 +55,10 @@ class StartUI {
                         System.out.println("Удалите одну или несколько заявок.");
                     }
                     break;
-                case 1:
+                case SHOWALL:
                     System.out.println(Arrays.asList(tracker.findAll()));
                     break;
-                case 2:
+                case EDIT:
                     String idItem = input.ask("Enter ID item:");
                     if (tracker.findeById(idItem) != null) {
                         String newName = input.ask("Enter new name:");
@@ -71,7 +70,7 @@ class StartUI {
                         System.out.println("Item not found.");
                     }
                     break;
-                case 3:
+                case DELETE:
                     String findIdItem = input.ask("Enter ID item:");
                     Item findItem = tracker.findeById(findIdItem);
                     if (findItem == null) {
@@ -81,7 +80,7 @@ class StartUI {
                         System.out.println("Item deleted.");
                     }
                     break;
-                case 4:
+                case FINDBYID:
                     String findItemById = input.ask("Enter ID item:");
                     if (tracker.findeById(findItemById) != null) {
                         tracker.findeById(findItemById);
@@ -90,7 +89,7 @@ class StartUI {
                         System.out.println("Item not found.");
                     }
                     break;
-                case 5:
+                case FINDBYNAME:
                     String findItemByName = input.ask("Enter Name item:");
                     if (tracker.findeByName(findItemByName) != null) {
                         tracker.findeByName(findItemByName);
@@ -100,7 +99,7 @@ class StartUI {
                     }
 
                     break;
-                case 6:
+                case EXIT:
                     String vopros = input.ask("Exit programm: y/n?");
                     if ((vopros.equals("y")) || (vopros.equals("Y"))) {
                         exit = true;
