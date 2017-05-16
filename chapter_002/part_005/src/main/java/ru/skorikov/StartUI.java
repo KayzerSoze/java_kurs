@@ -30,7 +30,6 @@ class StartUI {
      * Метод класса.
      */
     private void init() {
-
         Tracker tracker = new Tracker();
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
