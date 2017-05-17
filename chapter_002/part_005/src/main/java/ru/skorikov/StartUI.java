@@ -1,7 +1,6 @@
 package ru.skorikov;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 /**
  * Created with IntelliJ IDEA.
@@ -31,7 +30,6 @@ class StartUI {
      */
     private void init() {
         Tracker tracker = new Tracker();
-        Scanner scanner = new Scanner(System.in);
         boolean exit = false;
         do {
             for (MenuLevel menuLevel : MenuLevel.values()) {
@@ -39,10 +37,17 @@ class StartUI {
                         + ". "
                         + menuLevel.getNameMenuLevel());
             }
-            System.out.println("Select:");
-            int select = scanner.nextInt();
 
-            switch (MenuLevel.values()[select]) {
+            int selectNumber = Integer.MIN_VALUE;
+            String select = input.ask("Select:");
+            if (select.matches("[0-6]*")) {
+                selectNumber = Integer.parseInt(select);
+            } else {
+                System.out.println("Number please!");
+                continue;
+            }
+
+            switch (MenuLevel.values()[selectNumber]) {
                 case ADD:
                     String name = input.ask("Enter Item name:");
                     String description = input.ask("Enter Item description:");
