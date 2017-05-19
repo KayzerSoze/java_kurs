@@ -12,9 +12,14 @@ import java.util.Arrays;
 class StartUI {
     /**
      * Интерфейс.
-     * Переменная класса?
+     * Переменная класса
      */
     private Input input;
+    /**
+     * Поле класса.
+     * Переменная tracker.
+     */
+    private Tracker tracker = new Tracker();
 
     /**
      * Конструктор класса.
@@ -29,7 +34,7 @@ class StartUI {
      * Метод класса.
      */
     private void init() {
-        Tracker tracker = new Tracker();
+        this.tracker = tracker;
         boolean exit = false;
         do {
             for (MenuLevel menuLevel : MenuLevel.values()) {
