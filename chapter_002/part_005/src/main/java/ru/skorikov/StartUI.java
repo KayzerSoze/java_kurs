@@ -28,13 +28,13 @@ class StartUI {
      */
     private StartUI(Input input) {
         this.input = input;
+        this.tracker = tracker;
     }
 
     /**
      * Метод класса.
      */
     private void init() {
-        this.tracker = tracker;
         boolean exit = false;
         do {
             for (MenuLevel menuLevel : MenuLevel.values()) {
