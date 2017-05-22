@@ -19,14 +19,15 @@ class StartUI {
      * Поле класса.
      * Переменная tracker.
      */
-    private Tracker tracker = new Tracker();
+    private Tracker tracker;
 
     /**
      * Конструктор класса.
      *
      * @param input интерфейс.
+     * @param tracker Трекер - хранишище заявок.
      */
-    private StartUI(Input input) {
+    private StartUI(Input input, Tracker tracker) {
         this.input = input;
         this.tracker = tracker;
     }
@@ -132,8 +133,12 @@ class StartUI {
          */
         Input input = new ConsoleInput();
         /**
+         * Создаем новый объект класса Tracker.
+         */
+        Tracker tracker = new Tracker();
+        /**
          * StartUI принимает input и запускает метод init.
          */
-        new StartUI(input).init();
+        new StartUI(input, tracker).init();
     }
 }
