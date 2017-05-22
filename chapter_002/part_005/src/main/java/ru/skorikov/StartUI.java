@@ -137,7 +137,7 @@ class StartUI {
          */
         Tracker tracker = new Tracker();
         /**
-         * StartUI принимает input и запускает метод init.
+         * StartUI принимает input, tracker и запускает метод init.
          */
         new StartUI(input, tracker).init();
     }
