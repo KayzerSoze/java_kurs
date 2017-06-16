@@ -13,7 +13,6 @@ package ru.skorikov;
 public class Paint {
     /**
      * Метод отрисовки фигуры.
-     * Конструктор класса.
      * @param share принимает фигуру.
      */
     public void draw(Share share) {
