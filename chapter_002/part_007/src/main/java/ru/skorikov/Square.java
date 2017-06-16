@@ -10,23 +10,17 @@ package ru.skorikov;
  */
 public class Square implements Share {
     /**
-     * Метод рисует квадрат.
-     * @return квадрат.
+     * Поле класса.
+     * Хранит возвращаемую фигуру.
      */
     private StringBuilder sb = new StringBuilder();
-    /**
-     * Элемент построения фигуры.
-     */
-    private String element = " + + + + + + + + + + ";
-
     /**
      * Метод отрисовывающий квадрат.
      * @return квадрат.
      */
     public String pic() {
-        sb.append(element);
         for (int i = 0; i < 10; i++) {
-            System.out.println(sb);
+            sb.append(" + + + + + + + + + + \n");
         }
         return sb.toString();
     }
