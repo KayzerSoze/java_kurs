@@ -37,7 +37,7 @@ public class SquareTest {
 
         Paint paint = new Paint();
         Square square = new Square();
-        paint.draw(square.pic());
+        paint.draw(square);
 
         assertEquals(
                 " + + + + + + + + + + \n"

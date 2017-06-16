@@ -10,26 +10,22 @@ package ru.skorikov;
  */
 public class Triangle implements Share {
     /**
-     * Метод рисует треугольник.
-     * @return треугольник.
+     * Поле класса.
      */
     private StringBuilder sb = new StringBuilder();
-    /**
-     * Элемент построения фигуры.
-     */
-    private String element = " +";
 
     /**
-     * Метод отрисовывающий треугольник.
+     * Метод создающий треугольник.
      * @return треугольник.
      */
     public String pic() {
-        sb.append(element);
         for (int i = 0; i < 10; i++) {
-            System.out.println(sb);
-            sb.append(element);
+            sb.append(" + ");
+            for (int j = 0; j < i; j++) {
+                sb.append("+ ");
+            }
+            sb.append("\n");
         }
-
         return sb.toString();
     }
 
