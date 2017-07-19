@@ -41,19 +41,19 @@ public class TriangleTest {
 
         Paint paint = new Paint();
         Triangle triangle = new Triangle();
-        paint.draw(triangle.pic());
+        paint.draw(triangle);
 
         assertEquals(
-                " +\n"
-                        + " + +\n"
-                        + " + + +\n"
-                        + " + + + +\n"
-                        + " + + + + +\n"
-                        + " + + + + + +\n"
-                        + " + + + + + + +\n"
-                        + " + + + + + + + +\n"
-                        + " + + + + + + + + +\n"
-                        + " + + + + + + + + + +\n", outContent.toString());
+                " + \n"
+                        + " + + \n"
+                        + " + + + \n"
+                        + " + + + + \n"
+                        + " + + + + + \n"
+                        + " + + + + + + \n"
+                        + " + + + + + + + \n"
+                        + " + + + + + + + + \n"
+                        + " + + + + + + + + + \n"
+                        + " + + + + + + + + + + \n", outContent.toString());
 
     }
 

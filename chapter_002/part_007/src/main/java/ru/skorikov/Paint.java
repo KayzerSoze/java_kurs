@@ -13,10 +13,9 @@ package ru.skorikov;
 public class Paint {
     /**
      * Метод отрисовки фигуры.
-     *
      * @param share принимает фигуру.
      */
-    public void draw(String share) {
-
+    public void draw(Share share) {
+        System.out.print(share.pic());
     }
 }
