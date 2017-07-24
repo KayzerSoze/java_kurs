@@ -21,7 +21,6 @@ public class Item {
      * Id Заявки.
      */
     private String id;
-
     /**
      * Конструктор класса.
      *

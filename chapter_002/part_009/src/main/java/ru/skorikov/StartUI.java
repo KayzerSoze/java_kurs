@@ -40,7 +40,6 @@ class StartUI {
         this.input = input;
         this.tracker = tracker;
     }
-
     /**
      * Метод класса.
      * @throws MenuOutException сообщение о ошибке.

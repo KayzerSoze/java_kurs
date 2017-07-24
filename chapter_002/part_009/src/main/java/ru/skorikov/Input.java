@@ -15,7 +15,6 @@ public interface Input {
      * @return возвращает ответ пользователя.
      */
     String ask(String question);
-
     /**
      * Метод получает параметром строку и диапазон значений.
      *

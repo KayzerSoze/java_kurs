@@ -10,19 +10,22 @@ package ru.skorikov;
 public interface UserAction {
     /**
      * Ключ для доступа к методу execute.
+     *
      * @return ключ
      */
     int key();
 
     /**
      * Метод.
-     * @param input ввод
+     *
+     * @param input   ввод
      * @param tracker трекер
      */
     void execute(Input input, Tracker tracker);
 
     /**
      * Строка на экран.
+     *
      * @return строка
      */
     String info();

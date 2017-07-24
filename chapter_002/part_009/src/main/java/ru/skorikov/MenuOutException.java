@@ -13,6 +13,7 @@ public class MenuOutException extends Exception {
      * Метод возвращает сообщение об ошибке родительского класса.
      * @param msg сообщение.
      */
+
     public MenuOutException(String msg) {
         super(msg);
 

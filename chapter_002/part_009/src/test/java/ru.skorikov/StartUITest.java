@@ -18,6 +18,7 @@ import static org.junit.Assert.assertThat;
 public class StartUITest {
     /**
      * Тестируем добавление новой заявки.
+     *
      * @throws MenuOutException сообщение о ошибке.
      */
     @Test
@@ -30,6 +31,7 @@ public class StartUITest {
 
     /**
      * Тестируем нахождение всех заявок.
+     *
      * @throws MenuOutException сообщение о ошибке.
      */
     @Test
@@ -38,7 +40,7 @@ public class StartUITest {
         Input input = new StubInput(new String[]{"0", "name1", "desk1", "n",
                 "0", "name2", "desk2", "n",
                 "0", "name3", "desk3",
-                  "y"});
+                "y"});
         new StartUI(input, tracker).init();
         assertThat(tracker.findAll()[0].getName(), is("name1"));
         assertThat(tracker.findAll()[1].getName(), is("name2"));
@@ -47,6 +49,7 @@ public class StartUITest {
 
     /**
      * Тестируем удаление заявки.
+     *
      * @throws MenuOutException сообщение о ошибке.
      */
     @Test
@@ -66,6 +69,7 @@ public class StartUITest {
 
     /**
      * Тестируем изменение заявки.
+     *
      * @throws MenuOutException сообщение о ошибке.
      */
     @Test
@@ -85,6 +89,7 @@ public class StartUITest {
 
     /**
      * Тестируем поиск заявки по ID.
+     *
      * @throws MenuOutException сообщение о ошибке.
      */
     @Test
@@ -104,6 +109,7 @@ public class StartUITest {
 
     /**
      * Тестируем поиск заявки по имени.
+     *
      * @throws MenuOutException сообщение о ошибке.
      */
     @Test

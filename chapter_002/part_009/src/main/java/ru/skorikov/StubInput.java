@@ -23,7 +23,6 @@ public class StubInput implements Input {
      * Счетчик перемещения по массиву.
      */
     private int position = 0;
-
     /**
      * Конструктор класса.
      * Принимает массив ответов.

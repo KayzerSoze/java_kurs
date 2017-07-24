@@ -26,7 +26,6 @@ public class ConsoleInput implements Input {
         System.out.println(question);
         return scanner.nextLine();
     }
-
     /**
      * Метод выводит вопрос.
      * ожидает ответ пользователя

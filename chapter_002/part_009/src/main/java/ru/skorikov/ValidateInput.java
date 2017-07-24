@@ -7,6 +7,7 @@ package ru.skorikov;
  * @ date: 24.07.17
  * @ version Stady_2.
  */
+
 public class ValidateInput extends ConsoleInput {
     @Override
     public int ask(String question, int[] range) throws MenuOutException {

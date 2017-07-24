@@ -37,7 +37,6 @@ public class MenuTracker {
         this.input = atInput;
         this.tracker = atTracker;
     }
-
     /**
      * Меню из массива внутренних классов.
      */
@@ -48,7 +47,6 @@ public class MenuTracker {
         this.actions[3] = new DeleteItem();
         this.actions[4] = new FindById();
         this.actions[5] = new FindByName();
-
     }
 
     /**
