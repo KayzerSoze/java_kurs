@@ -18,6 +18,8 @@
         <module>part_005</module>
         <module>part_006</module>
         <module>part_007</module>
+        <module>part_008</module>
+        <module>part_009</module>
     </modules>
 
 </project>
