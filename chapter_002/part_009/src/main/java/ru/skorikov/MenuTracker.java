@@ -1,6 +1,5 @@
 package ru.skorikov;
 
-import java.util.Arrays;
 
 /**
  * Created with IntelliJ IDEA.
@@ -37,6 +36,7 @@ public class MenuTracker {
         this.input = atInput;
         this.tracker = atTracker;
     }
+
     /**
      * Меню из массива внутренних классов.
      */
@@ -128,7 +128,13 @@ public class MenuTracker {
          * @param atTracker трекер.
          */
         public void execute(Input atInput, Tracker atTracker) {
-            System.out.println(Arrays.asList(tracker.findAll()));
+            for (Item item : tracker.findAll()) {
+                if (item != null) {
+                    System.out.println(item.getId() + " "
+                            + item.getName() + " "
+                            + item.getDescription());
+                }
+            }
 
         }
 

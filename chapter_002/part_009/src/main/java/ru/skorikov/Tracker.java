@@ -100,6 +100,7 @@ class Tracker {
      */
     public Item[] findAll() {
         return Arrays.copyOf(this.items, position);
+
     }
 
     /**
