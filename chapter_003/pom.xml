@@ -1,0 +1,21 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>chapter_003</artifactId>
+    <version>2.0</version>
+
+    <packaging>pom</packaging>
+    <parent>
+        <groupId>ru.skorikov</groupId>
+        <artifactId>java_kurs</artifactId>
+        <version>2.0</version>
+    </parent>
+
+    <modules>
+        <module>part_001</module>
+        <module>part_002</module>
+        <module>part_003</module>
+        <module>part_004</module>
+    </modules>
+
+</project>
