@@ -24,10 +24,7 @@ public class UserConvert {
         HashMap<Integer, User> map = new HashMap<>();
         for (User user : list) {
             int id = user.getId();
-            String name = user.getName();
-            String sity = user.getSity();
-
-            map.put(id, new User(name, sity));
+            map.put(id, user);
         }
         return map;
     }

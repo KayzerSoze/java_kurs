@@ -31,9 +31,9 @@ public class UserConvertTest {
         list.add(user2);
         list.add(user3);
         HashMap<Integer, User> map1 = new HashMap<>();
-        map1.put(user1.getId(), new User(user1.getName(), user1.getSity()));
-        map1.put(user2.getId(), new User(user2.getName(), user2.getSity()));
-        map1.put(user3.getId(), new User(user3.getName(), user3.getSity()));
+        map1.put(user1.getId(), user1);
+        map1.put(user2.getId(), user2);
+        map1.put(user3.getId(), user3);
 
         HashMap<Integer, User> map2 = userConvert.process(list);
 
