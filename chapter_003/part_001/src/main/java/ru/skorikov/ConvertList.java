@@ -45,9 +45,16 @@ public class ConvertList {
         for (int[] m : array) {
             for (int n : m) {
                 if (list.size() > 0) {
-                    array[i][j] = list.get(0);
-                    list.remove(0);
-                    j++;
+                    // Проверка на null
+                    if (list.get(0) != null) {
+                        array[i][j] = list.get(0);
+                        list.remove(0);
+                        j++;
+                    } else {
+                        array[i][j] = 0;
+                        list.remove(0);
+                        j++;
+                    }
                 } else {
                     array[i][j] = 0;
                 }
@@ -57,4 +64,23 @@ public class ConvertList {
         }
         return array;
     }
+
+    public static void main(String[] args) {
+        ConvertList convertList = new ConvertList();
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(null);
+        list.add(4);
+
+        int[][] nums = convertList.toArray(list, 3);
+
+        for (int[] m : nums) {
+            for (int n : m) {
+                System.out.println(n);
+            }
+        }
+    }
+
 }
