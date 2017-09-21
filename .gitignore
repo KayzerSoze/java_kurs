@@ -14,6 +14,7 @@ hs_err_pid*
 /.idea/
 /.settings/
 /target/
+/org/
 
 Будет удалено chapter_001/part_001/src/uml/
 Будет удалено chapter_002/part_001/.idea/workspace.xml

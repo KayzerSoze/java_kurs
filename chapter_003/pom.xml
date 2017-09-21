@@ -1,9 +1,7 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>chapter_003</artifactId>
     <version>2.0</version>
-
     <packaging>pom</packaging>
     <parent>
         <groupId>ru.skorikov</groupId>
